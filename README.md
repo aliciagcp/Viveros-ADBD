@@ -4,7 +4,15 @@ Integrantes del grupo:
 - ALICIA GUADALUPE CRUZ PÉREZ
 - IVÁN TEXENERY DÍAZ GARCÍA
 
-Operaciones empleadas:
+Para la práctica se ha seguido el siguiente modelo Entidad-Relación:
+
+![Entidad-Relacion](./ModeloEntidadRelacion)
+
+Y el siguiente modelo Relacional:
+
+![ModeloRelacional](./ModeloRelacional)
+
+Se han empleado las siguientes operaciones:
 
 1. Salida de un SELECT de cada tabla de la base de datos.
 
