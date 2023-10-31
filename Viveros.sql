@@ -10,36 +10,36 @@ CREATE TABLE Vivero (
 CREATE TABLE Zonas (
 	Nombre_Zona Varchar(50) PRIMARY KEY NOT NULL,
    	Localizacion VARCHAR(50) NOT NULL,
-    Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE CASCADE
+    	Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE CASCADE
 );
 
 -- Crear tabla Productos
 CREATE TABLE Productos (
 	Codigo_Producto NUMERIC(12) NOT NULL,
-    Nombre_Producto VARCHAR(50) NOT NULL,
-    Precio DECIMAL(7,2) NOT NULL,
-    Stock INT,
-    Nombre_Zona VARCHAR(50) REFERENCES Zonas ON DELETE CASCADE,
-    Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE CASCADE,
-    PRIMARY KEY(Codigo_Producto, Nombre_Vivero)
+    	Nombre_Producto VARCHAR(50) NOT NULL,
+    	Precio DECIMAL(7,2) NOT NULL,
+    	Stock INT,
+    	Nombre_Zona VARCHAR(50) REFERENCES Zonas ON DELETE CASCADE,
+    	Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE CASCADE,
+    	PRIMARY KEY(Codigo_Producto, Nombre_Vivero)
 );
 
 -- Crear tabla Empleado
 CREATE TABLE Empleado (
-    DNI_Empleado NUMERIC(8) PRIMARY KEY NOT NULL,
+    	DNI_Empleado NUMERIC(8) PRIMARY KEY NOT NULL,
 	Nombre_Empleado VARCHAR(50) NOT NULL,
 	Numero_Cuenta NUMERIC(20) NOT NULL
 );
 
 -- Crear tabla ClientePlus
 CREATE TABLE ClientePlus (
-    DNI_Cliente NUMERIC(8,0) PRIMARY KEY NOT NULL,
+    	DNI_Cliente NUMERIC(8,0) PRIMARY KEY NOT NULL,
 	Nombre_Cliente VARCHAR(50) NOT NULL,
 	Volumen_Mensual DECIMAL(12,2) DEFAULT 0 CHECK (Volumen_Mensual >= 0),
 	FI_Suscripcion DATE,
-    FF_Suscripcion DATE, 
-    Bonificacion NUMERIC(2,0) DEFAULT 10,
-    CONSTRAINT PD_CK CHECK (FF_Suscripcion >= FI_Suscripcion)
+    	FF_Suscripcion DATE, 
+    	Bonificacion NUMERIC(2,0) DEFAULT 10,
+    	CONSTRAINT PD_CK CHECK (FF_Suscripcion >= FI_Suscripcion)
 );
 
 -- Crear tabla Vende
@@ -48,9 +48,9 @@ CREATE TABLE Vende (
 	Codigo_Producto NUMERIC(12,0)[],
 	Precio_Final DECIMAL(7,2) NOT NULL DEFAULT 0.0,
 	Cantidad INTEGER[] NOT NULL,
-    DNI_Cliente NUMERIC(8,0) REFERENCES ClientePlus ON DELETE SET DEFAULT,
-    DNI_Empleado NUMERIC(8,0) REFERENCES Empleado ON DELETE SET DEFAULT,
-    Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE SET DEFAULT
+    	DNI_Cliente NUMERIC(8,0) REFERENCES ClientePlus ON DELETE SET DEFAULT,
+    	DNI_Empleado NUMERIC(8,0) REFERENCES Empleado ON DELETE SET DEFAULT,
+    	Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE SET DEFAULT
 );
 
 -- Crear tabla Disponibilidad
@@ -58,7 +58,7 @@ CREATE TABLE Disponibilidad (
 	DNI_Empleado NUMERIC(8) PRIMARY KEY REFERENCES Empleado ON DELETE CASCADE,
 	Nombre_Vivero VARCHAR(50) REFERENCES Vivero ON DELETE SET DEFAULT,
 	FI_Trabajo DATE,
-    FF_Trabajo DATE
+    	FF_Trabajo DATE
 );
 
 -- Método para calcular el valor del precio final
