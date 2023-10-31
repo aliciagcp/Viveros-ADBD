@@ -6,11 +6,11 @@ Integrantes del grupo:
 
 Para la práctica se ha seguido el siguiente modelo Entidad-Relación:
 
-![Entidad-Relacion](./ModeloEntidadRelacion)
+![Entidad-Relacion](./ModeloEntidadRelacion.png)
 
 Y el siguiente modelo Relacional:
 
-![ModeloRelacional](./ModeloRelacional)
+![ModeloRelacional](./ModeloRelacional.png)
 
 Se han empleado las siguientes operaciones:
 
