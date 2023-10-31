@@ -8,7 +8,7 @@ Para la práctica se ha seguido el siguiente modelo Entidad-Relación:
 
 ![Entidad-Relacion](./ModeloEntidadRelacion.png)
 
-Y el siguiente modelo Relacional:
+Y el siguiente diseño Relacional:
 
 ![ModeloRelacional](./ModeloRelacional.png)
 
