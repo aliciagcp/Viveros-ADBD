@@ -10,7 +10,7 @@ Para la práctica se ha seguido el siguiente modelo Entidad-Relación:
 
 Y el siguiente diseño Relacional:
 
-![ModeloRelacional](./ModeloRelacional.png)
+![ModeloRelacional](./DiseñoRelacional.png)
 
 Se han empleado las siguientes operaciones:
 
